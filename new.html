@@ -1,0 +1,98 @@
+<!-- Author:raguljr (jothiraj.ragul@gmail.com) -->
+
+<!DOCTYPE html>
+<html ng-app="toppr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Onepush</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+	
+	<link href="style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="app.js"></script>
+  </head>
+  <body>
+
+	<div class="container-fluid">
+		<div class="row head">
+		<h1><span id="mt">OnePush</span></h1><h4><span id="st">-Finding the best Online website!</span></h4>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row" ng-controller="getdata">
+		
+		<div class="col-sm-8 ">
+		
+		<div class="input-group sb">
+    <span class="input-group-addon">
+        <i class="glyphicon glyphicon-search"></i>
+    </span>
+    <input type="text"  class="form-control" placeholder="Search." ng-model="searchval"/>
+</div>
+		
+			
+				
+			
+			
+			
+  <div class="main"  ng-repeat="i in total">
+ 
+  
+  
+  
+  <div ng-repeat="j in i | filter:searchval" style="background-color:#F8F7F7" class="single">
+  <table class="table " style="width:100%"  >
+  
+  <tr>
+    <td rowspan="2" class="col-sm-1"><img src="{{j.favicon_image}}" height="80" width="100"></td>
+    <td colspan="2" class="col-sm-1" style="color:#68C1BA"><b>{{j.title}}</b></td>
+  </tr>
+  <tr>
+    <td class="col-sm-2"><span class="glyphicon glyphicon-tag"></span>{{j.tag}}</td>
+<td ><span class="glyphicon glyphicon-link"></span><a href="{{j.url_address}}">{{j.url_address}}</a></td>
+  </tr>
+</table>
+</div>
+  </div>
+			</div>
+  <div class="col-sm-3 formbody" style="background-color:#FFFFFF">
+  <h3>Contribute/Add website</h3>
+  <form>
+  <div class="form-group">
+  
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Title">
+  </div>
+  <div class="form-group">
+    
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Webaddress">
+  </div>
+  
+  <div class="form-group form-inline">
+ <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Tag">
+  <button type="submit" class="btn btn-default pull-right">Submit</button>
+  </div>
+</form>
+  
+  </div>
+</div>
+	</div>
+	
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

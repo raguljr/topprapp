@@ -1,0 +1,50 @@
+body {
+    background-image: url("seigaiha.png");
+    
+}
+
+.head{
+	#background-color:white;
+
+}
+
+#mt{
+	color:#00A255;
+}
+
+#st{
+	color:#81C54C;
+}
+
+.main{
+	min-height:400px;
+}
+.formbody{
+	min-height:200px;
+	margin-top:10px;
+	border-radius: 15px;
+}
+
+td{
+	border-top: none !important;
+	
+}
+
+.single{
+	text-overflow: ellipsis;
+    overflow: hidden;
+	border-radius: 25px;
+    border: 2px solid #DBDBDB;
+    padding: 10px;
+	margin:10px;
+	padding-bottom:3px;
+}
+
+.sb{
+	margin:10px;
+}
+
+
+#mt,#st{
+	padding-left:20px;
+}
